@@ -13,6 +13,8 @@
   }
 }
 
+console.log("Trying to using codeRabbit for review PRs")
+
 @layer components {
   .page-title {
     @apply text-3xl font-bold text-foreground tracking-tight;
