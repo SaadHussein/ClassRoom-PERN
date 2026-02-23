@@ -56,7 +56,8 @@ export const ALLOWED_TYPES = [
 ];
 
 const getEnvVar = (key: string): string => {
-  const value = import.meta.env[key];
+  const env = import.meta.env as Record<string, string | undefined>;
+  const value = env[key];
   if (!value) {
     throw new Error(`Missing environment variable: ${key}`);
   }
